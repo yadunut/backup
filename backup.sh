@@ -72,6 +72,7 @@ fi
     --include ~/Desktop \
     --include ~/Documents \
     --include ~/Downloads \
-    --exclude '**' \
+    --exclude "**" \
+    --exclude "**.DS_Store" \
     ~ \
     "$RSYNC"
