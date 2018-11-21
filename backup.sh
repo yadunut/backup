@@ -72,6 +72,7 @@ fi
     --include ~/Desktop \
     --include ~/Documents \
     --include ~/Downloads \
+    --include ~/.config \
     --exclude "**" \
     --exclude "**.DS_Store" \
     ~ \
