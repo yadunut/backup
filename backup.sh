@@ -10,6 +10,7 @@ set -eu -o pipefail
 # Source GPG password, rsync paths
 # Sets variables
 HOME="/Users/yadunandprem"
+# shellcheck disable=1090
 source "$HOME/.duplicity/.env_variables.conf"
 
 function displayNotification() {
@@ -18,8 +19,8 @@ function displayNotification() {
 }
 
 function finish() {
-    local exit_value=$?
-    local date="$(date +'%a %I:%M %p')"
+    exit_value=$?
+    date="$(date +'%a %I:%M %p')"
     case $exit_value in
     0)
         displayNotification "Successfully backed up at $date"
